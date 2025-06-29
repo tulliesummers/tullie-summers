@@ -10,65 +10,7 @@ VANTA.FOG({
   blurFactor: 0.5,
   speed: 1.0
 });
-//function startCountdown(endDateStr, prefixId) {
-//  const countdown = setInterval(() => {
-//    const now = new Date().getTime();
-  //  const endDate = new Date(endDateStr).getTime();
-    //const distance = endDate - now;
 
-    //if (distance < 0) {
-     // clearInterval(countdown);
-      //document.getElementById(prefixId + 'days').innerText = '0';
-      //document.getElementById(prefixId + 'hours').innerText = '0';
-      //document.getElementById(prefixId + 'minutes').innerText = '0';
-      //document.getElementById(prefixId + 'seconds').innerText = '0';
-      //return;
-    //}
-
-    //const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  //  const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    //const seconds = Math.floor((distance / 1000) % 60);
-
-//    document.getElementById(prefixId + 'days').innerText = days;
-//    document.getElementById(prefixId + 'hours').innerText = hours;
-//    document.getElementById(prefixId + 'minutes').innerText = minutes;
-//    document.getElementById(prefixId + 'seconds').innerText = seconds;
-//  }, 1000);
-//}
-
-// Example usage: count down to July 31, 2025 00:00:00
-//startCountdown('July 24, 2025 00:00:00', 'countdown-');
-//function startCountdown(endDateStr, prefixId) {
-//  const countdown = setInterval(() => {
-//    const now = new Date().getTime();
-//    const endDate = new Date(endDateStr).getTime();
-//    const distance = endDate - now;
-
-//    if (distance < 0) {
-//      clearInterval(countdown);
-//      document.getElementById(prefixId + 'days').innerText = '0';
-//      document.getElementById(prefixId + 'hours').innerText = '0';
-//      document.getElementById(prefixId + 'minutes').innerText = '0';
-//      document.getElementById(prefixId + 'seconds').innerText = '0';
-//      return;
-//    }
-
-//    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-//    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-//    const seconds = Math.floor((distance / 1000) % 60);
-
-//    document.getElementById(prefixId + 'days').innerText = days;
-//    document.getElementById(prefixId + 'hours').innerText = hours;
-//    document.getElementById(prefixId + 'minutes').innerText = minutes;
-//    document.getElementById(prefixId + 'seconds').innerText = seconds;
-//  }, 1000);
-//}
-
-// Start the countdown for Out of Frame
-//startCountdown('July 24, 2025 00:00:00', 'countdown-outofframe-');
-//<script>
 // Set the date we're counting down to
 var countDownDate = new Date("July 24, 2025 00:00:00").getTime();
 
@@ -99,4 +41,4 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-//</script>
+
