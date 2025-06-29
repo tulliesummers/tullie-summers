@@ -1,0 +1,269 @@
+/* RESET + GLOBAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: white;
+  background-color: black;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* VANTA BACKGROUND CONTAINER */
+#vanta-bg {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* CENTERED CONTENT */
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 90%;
+  padding: 1rem;
+  z-index: 2;
+}
+
+/* HEADINGS + PARAGRAPH */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* FADE IN ANIMATION */
+.fade-in {
+  animation: fadeIn ease 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* AUTHOR TAGLINE */
+.author-tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: crimson;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn ease 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid crimson;
+  backdrop-filter: blur(4px);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: crimson;
+}
+
+/* BOOKS SECTION */
+.books-section {
+  margin: 4rem auto 2rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid crimson;
+  text-align: center;
+  max-width: 700px;
+  border-radius: 8px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.books-section h2 {
+  font-size: 2rem;
+  color: crimson;
+}
+
+.books-section .tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.books-section blockquote {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem auto;
+  color: #ddd;
+}
+
+/* BUTTON STYLE */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: crimson;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #990000;
+}
+
+
+
+.book-cover {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px crimson;
+}
+.hero-name {
+  font-family: 'Great Vibes', cursive;
+  font-size:  clamp(2.5rem, 12vw, 16rem); /* min, ideal, max */
+  color: rgb(248, 245, 248);
+  text-align: center;
+  margin-top: 2.5rem;
+  z-index: 15;
+  position: relative;
+  animation: fadeIn ease 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  top: 18vh;
+}
+.hero-name {
+  /* existing styles... */
+  text-shadow: 0 0 10px crimson, 0 0 20px darkred;
+}
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 3rem;
+    top: 5vh;
+  }
+}
+.upcoming-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  color: white;
+}
+
+.upcoming-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.upcoming-book {
+  background: rgba(20, 0, 0, 0.7);
+  padding: 1.5rem;
+  border: 1px solid crimson;
+  border-radius: 8px;
+  width: 350px;
+  flex: 1 1 300px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  color: white;
+  text-align: left;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.upcoming-book:hover {
+  transform: scale(1.02);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Optional mobile tweak */
+@media (max-width: 700px) {
+  .upcoming-book {
+    width: 90%;
+  }
+}
+.countdown-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.countdown-label {
+  font-style: italic;
+  color: crimson;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: crimson;
+}
+
+.countdown div {
+  background: rgba(255, 0, 0, 0.1);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  min-width: 60px;
+  text-align: center;
+}
